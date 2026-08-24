@@ -1,0 +1,286 @@
+/* ═══════════════════════════════════════════════════════════════════
+   showcase.css — SECTION 03 (bento) + SECTION 04 (archive rail)
+   ═══════════════════════════════════════════════════════════════════ */
+
+.work {
+  position: relative;
+  padding: var(--section-padding);
+  background: var(--bg-primary);
+}
+
+.work__title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: .4rem 2rem;
+  font-size: var(--heading-lg);
+  margin-bottom: clamp(2.5rem, 6vw, 5rem);
+}
+.work__titleMain { display: block; min-width: 0; }
+.work__titleMeta {
+  font: 500 var(--label)/1 var(--font-heading);
+  letter-spacing: var(--track-wide);
+  text-transform: uppercase;
+  color: var(--white-dim);
+  white-space: nowrap;
+}
+
+/* ── bento grid ────────────────────────────────────────────────────── */
+
+.bento {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: minmax(230px, auto);
+  gap: clamp(.7rem, 1.2vw, 1.1rem);
+}
+
+.card {
+  --card-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
+  position: relative;
+  grid-column: span 4;
+  display: flex;
+  align-items: flex-end;
+  padding: clamp(3rem, 4.6vw, 3.8rem) clamp(1.2rem, 2vw, 1.8rem) clamp(1.2rem, 2vw, 1.8rem);
+  background:
+    linear-gradient(160deg, rgba(241, 241, 241, .028), transparent 55%),
+    var(--bg-tertiary);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  transition: border-color .5s var(--ease-out-expo), background-color .5s var(--ease-out-expo);
+}
+.card--xl   { grid-column: 1 / 8;  grid-row: span 2; }
+.card--wide { grid-column: 1 / 8; }
+
+/* grain overlay on every card */
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: var(--card-grain);
+  opacity: .05;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+/* hairline sweep on hover */
+.card::after {
+  content: '';
+  position: absolute;
+  left: 0; top: 0;
+  width: 100%; height: 2px;
+  background: linear-gradient(90deg, var(--blue-accent), transparent 70%);
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  transition: transform .7s var(--ease-out-expo);
+}
+.card:hover, .card:focus-visible {
+  border-color: var(--blue-accent);
+  background-color: #161616;
+  outline: none;
+}
+.card:hover::after, .card:focus-visible::after { transform: scaleX(1); }
+
+.card__inner { transform: translateZ(26px); transition: transform .5s var(--ease-out-expo); }
+.card:hover .card__inner { transform: translateZ(34px); }
+
+.card__tag {
+  position: absolute;
+  top: clamp(1rem, 1.6vw, 1.4rem);
+  left: clamp(1.2rem, 2vw, 1.8rem);
+  padding: .3rem .6rem;
+  border: 1px solid rgba(37, 99, 235, .45);
+  background: rgba(37, 99, 235, .1);
+  font: 600 var(--label)/1 var(--font-heading);
+  letter-spacing: var(--track-wide);
+  text-transform: uppercase;
+  color: var(--blue-glow);
+  transition: background-color .4s var(--ease-out-expo), color .4s var(--ease-out-expo);
+}
+.card:hover .card__tag { background: rgba(37, 99, 235, .22); color: #cfe0ff; }
+
+.card__idx {
+  position: absolute;
+  top: clamp(.8rem, 1.4vw, 1.2rem);
+  right: clamp(1.2rem, 2vw, 1.8rem);
+  font: 600 var(--label)/1 var(--font-heading);
+  letter-spacing: var(--track-mid);
+  color: var(--white-dim);
+  font-variant-numeric: tabular-nums;
+  transition: color .4s var(--ease-out-expo);
+  z-index: 1;
+}
+.card:hover .card__idx { color: var(--red-primary); }
+
+/* oversized ghost numeral — fills the dead air on tall cards */
+.card__ghost {
+  position: absolute;
+  top: -.6rem;
+  right: clamp(.6rem, 1.4vw, 1.2rem);
+  font: 700 clamp(3.4rem, 7.5vw, 7.5rem)/1 var(--font-heading);
+  letter-spacing: -.04em;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(241, 241, 241, .06);
+  pointer-events: none;
+  transition: -webkit-text-stroke-color .6s var(--ease-out-expo), transform .8s var(--ease-out-expo);
+}
+.card--xl .card__ghost {
+  top: auto;
+  bottom: 34%;
+  font-size: clamp(6rem, 12vw, 12rem);
+}
+.card:hover .card__ghost {
+  -webkit-text-stroke-color: rgba(37, 99, 235, .3);
+  transform: translateY(-6px);
+}
+
+.card__year {
+  display: block;
+  font: 500 var(--label)/1 var(--font-heading);
+  letter-spacing: var(--track-wide);
+  color: var(--white-dim);
+  margin-bottom: .7rem;
+}
+.card__title {
+  font-size: var(--heading-md);
+  color: var(--red-primary);
+  margin-bottom: .6rem;
+  transition: color .4s var(--ease-out-expo);
+}
+.card--xl .card__title { font-size: clamp(1.9rem, 4vw, 3.4rem); }
+.card:hover .card__title { color: var(--red-hover); }
+
+.card__desc {
+  font-size: var(--body-md);
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--white-primary);
+  max-width: 44ch;
+}
+.card--xl .card__desc { font-size: var(--body-lg); max-width: 40ch; }
+
+.card__meta {
+  display: block;
+  margin-top: 1.1rem;
+  padding-top: .9rem;
+  border-top: 1px solid var(--line);
+  font: 500 var(--label)/1.4 var(--font-heading);
+  letter-spacing: var(--track-mid);
+  text-transform: uppercase;
+  color: var(--white-muted);
+}
+
+/* ── archive rail ──────────────────────────────────────────────────── */
+
+.archive {
+  position: relative;
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  overflow: hidden;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.archive__head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: clamp(2rem, 5vh, 4rem) var(--gutter) clamp(2.5rem, 6vh, 4.5rem);
+}
+/* hint that the rail is scroll-driven */
+.archive__hint {
+  display: inline-flex;
+  align-items: center;
+  gap: .7rem;
+  font: 500 var(--label)/1 var(--font-heading);
+  letter-spacing: var(--track-wide);
+  text-transform: uppercase;
+  color: var(--white-dim);
+}
+.archive__hint i {
+  width: 44px; height: 1px;
+  background: var(--blue-accent);
+  animation: cueSlide 2.4s var(--ease-in-out) infinite;
+}
+.archive__title {
+  font-size: var(--heading-lg);
+  color: var(--white-primary);
+  margin-left: auto;
+}
+.rail { position: relative; }
+.rail__track {
+  display: flex;
+  gap: clamp(.7rem, 1.2vw, 1.1rem);
+  padding: 0 var(--gutter) clamp(3rem, 7vh, 5rem);
+  width: max-content;
+  will-change: transform;
+}
+.railCard {
+  flex: none;
+  width: clamp(240px, 22vw, 330px);
+  padding: clamp(1.2rem, 2vw, 1.7rem);
+  background: var(--bg-tertiary);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  transition: border-color .5s var(--ease-out-expo), transform .5s var(--ease-out-expo);
+}
+.railCard:hover { border-color: var(--red-primary); transform: translateY(-6px); }
+.railCard span {
+  display: block;
+  font: 500 var(--label)/1 var(--font-heading);
+  letter-spacing: var(--track-wide);
+  color: var(--blue-accent);
+  margin-bottom: 1rem;
+  font-variant-numeric: tabular-nums;
+}
+.railCard h3 {
+  font-size: var(--heading-sm);
+  color: var(--white-primary);
+  margin-bottom: .5rem;
+}
+.railCard p {
+  font-size: var(--body-md);
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--white-muted);
+}
+.railCard--end {
+  border-color: rgba(230, 57, 70, .4);
+  background:
+    linear-gradient(150deg, rgba(230, 57, 70, .1), transparent 60%),
+    var(--bg-tertiary);
+}
+.railCard--end span { color: var(--red-primary); }
+.railCard--end h3 { color: var(--red-primary); }
+
+/* ── responsive ────────────────────────────────────────────────────── */
+
+@media (max-width: 1100px) {
+  .card--xl, .card--wide { grid-column: span 12; }
+  .card--xl { grid-row: span 1; }
+  .card { grid-column: span 6; }
+}
+
+@media (max-width: 768px) {
+  .bento { grid-template-columns: 1fr; grid-auto-rows: auto; }
+  .card, .card--xl, .card--wide { grid-column: 1 / -1; grid-row: auto; }
+  .card__inner { transform: none !important; }
+  .card::after { display: none; }
+
+  /* rail becomes a native snap scroller on touch */
+  .rail { overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; }
+  .rail__track { padding-bottom: clamp(3rem, 7vh, 5rem); }
+  .railCard { scroll-snap-align: start; width: 78vw; }
+  .rail::-webkit-scrollbar { height: 3px; }
+  .archive__head { flex-direction: column; align-items: flex-start; gap: 1rem; }
+}
+
+@media (max-width: 480px) {
+  .card { padding: 3rem 1.1rem 1.1rem; }
+  .card__desc { font-size: .9rem; }
+  .railCard { width: 82vw; }
+}

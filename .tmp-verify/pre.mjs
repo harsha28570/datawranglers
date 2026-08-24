@@ -1,0 +1,10 @@
+import puppeteer from 'puppeteer';
+const b = await puppeteer.launch({ headless:'new', args:['--no-sandbox','--disable-setuid-sandbox'] });
+const p = await b.newPage();
+await p.setViewport({ width: 1440, height: 900 });
+await p.goto('http://localhost:4173/index.html', { waitUntil: 'domcontentloaded' });
+await new Promise(r => setTimeout(r, 700));
+await p.screenshot({ path: 'shots/00-preloader.png' });
+await new Promise(r => setTimeout(r, 900));
+await p.screenshot({ path: 'shots/00-preloader2.png' });
+await b.close();

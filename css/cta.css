@@ -1,0 +1,216 @@
+/* ═══════════════════════════════════════════════════════════════════
+   cta.css — SECTION 05, the climax
+   ═══════════════════════════════════════════════════════════════════ */
+
+.cta {
+  position: relative;
+  min-height: 88svh;
+  display: flex;
+  align-items: center;
+  padding: var(--section-padding);
+  background:
+    radial-gradient(90% 70% at 50% 100%, rgba(230, 57, 70, .1), transparent 62%),
+    var(--bg-primary);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.cta__glow {
+  position: absolute;
+  left: 50%;
+  bottom: -30%;
+  width: min(1200px, 120vw);
+  aspect-ratio: 1.6;
+  translate: -50% 0;
+  z-index: -1;
+  background: radial-gradient(closest-side, rgba(220, 20, 60, .22), transparent 72%);
+  animation: breathe 7s var(--ease-in-out) infinite;
+  pointer-events: none;
+}
+@keyframes breathe {
+  0%, 100% { opacity: .55; transform: scale(1); }
+  50%      { opacity: 1;   transform: scale(1.08); }
+}
+
+.cta__ghost {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  font: 700 clamp(4.5rem, 19vw, 20rem)/1 var(--font-heading);
+  letter-spacing: -.05em;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(241, 241, 241, .05);
+  white-space: nowrap;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.cta__inner {
+  width: 100%;
+  max-width: 1100px;
+  display: grid;
+  gap: clamp(1.4rem, 3vh, 2.2rem);
+}
+
+.cta__title {
+  font-size: clamp(3rem, 9.5vw, 8.5rem);
+  color: var(--white-primary);
+  line-height: .95;
+}
+.cta__title > span { display: block; overflow: hidden; }
+.cta__title > span:last-child { padding-left: clamp(0px, 8vw, 150px); }
+
+.cta__sub {
+  max-width: 52ch;
+  font-size: var(--body-lg);
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--white-muted);
+}
+
+/* ── next event + countdown ────────────────────────────────────────── */
+
+.cta__next {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: clamp(1.2rem, 4vw, 3rem);
+  padding: clamp(1.1rem, 2vw, 1.5rem) 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.cta__nextLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: .7rem;
+  font: 500 var(--label)/1 var(--font-heading);
+  letter-spacing: var(--track-wide);
+  text-transform: uppercase;
+  color: var(--white-muted);
+}
+.cta__dateValue {
+  color: var(--white-primary);
+  letter-spacing: var(--track-mid);
+  font-variant-numeric: tabular-nums;
+}
+.pulse {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--red-primary);
+  box-shadow: 0 0 0 0 rgba(230, 57, 70, .6);
+  animation: pulseRing 2s var(--ease-out-quart) infinite;
+}
+@keyframes pulseRing {
+  0%   { box-shadow: 0 0 0 0 rgba(230, 57, 70, .55); }
+  70%  { box-shadow: 0 0 0 12px rgba(230, 57, 70, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(230, 57, 70, 0); }
+}
+
+.countdown {
+  display: flex;
+  gap: clamp(.7rem, 2vw, 1.6rem);
+  margin-left: auto;
+}
+.countdown__cell {
+  display: grid;
+  gap: .3rem;
+  justify-items: center;
+  min-width: 3.4rem;
+  padding: .55rem .5rem;
+  border: 1px solid var(--line);
+  background: rgba(20, 20, 20, .7);
+  border-radius: 3px;
+}
+.countdown__cell b {
+  font: 600 clamp(1.1rem, 2vw, 1.6rem)/1 var(--font-heading);
+  letter-spacing: -.02em;
+  color: var(--white-primary);
+  font-variant-numeric: tabular-nums;
+}
+.countdown__cell span {
+  font: 500 9px/1 var(--font-heading);
+  letter-spacing: var(--track-wide);
+  text-transform: uppercase;
+  color: var(--white-dim);
+}
+
+/* ── magnetic register button ──────────────────────────────────────── */
+
+.cta__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.2rem clamp(1.5rem, 4vw, 3rem);
+  padding-top: clamp(.4rem, 1vh, 1rem);
+}
+
+.btnMagnet {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: clamp(.8rem, 1.6vw, 1.4rem);
+  min-height: 64px;
+  padding: 1.35rem clamp(1.8rem, 4vw, 3.2rem);
+  background: var(--red-primary);
+  color: #0A0A0A;
+  border: 1px solid var(--red-primary);
+  border-radius: 2px;
+  overflow: hidden;
+  will-change: transform;
+  transition: border-color .4s var(--ease-out-expo), color .4s var(--ease-out-expo);
+}
+/* liquid blue fill sliding in from the left */
+.btnMagnet__fill {
+  position: absolute;
+  inset: 0;
+  background: var(--blue-accent);
+  transform: translateX(-101%) skewX(-8deg);
+  transform-origin: 0 50%;
+  transition: transform .7s var(--ease-out-expo);
+}
+.btnMagnet__label,
+.btnMagnet__arrow {
+  position: relative;
+  z-index: 1;
+  font: 700 clamp(.9rem, 1.5vw, 1.15rem)/1 var(--font-heading);
+  letter-spacing: var(--track-wide);
+  text-transform: uppercase;
+}
+.btnMagnet__arrow {
+  font-size: 1.3em;
+  letter-spacing: 0;
+  transition: transform .5s var(--ease-out-expo);
+}
+.btnMagnet:hover { border-color: var(--blue-glow); color: var(--white-primary); }
+.btnMagnet:hover .btnMagnet__fill { transform: translateX(0) skewX(0deg); }
+.btnMagnet:hover .btnMagnet__arrow { transform: translateX(8px); }
+.btnMagnet:active { transform: scale(.985) !important; }
+
+.cta__note {
+  font: 500 var(--label)/1.6 var(--font-heading);
+  letter-spacing: var(--track-mid);
+  text-transform: uppercase;
+  color: var(--white-dim);
+}
+
+/* ── responsive ────────────────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .cta { min-height: 82svh; }
+  .cta__title > span:last-child { padding-left: 0; }
+  .countdown { margin-left: 0; width: 100%; }
+  .countdown__cell { flex: 1; min-width: 0; }
+  .btnMagnet { width: 100%; justify-content: center; }
+  .cta__actions { width: 100%; }
+}
+
+@media (max-width: 480px) {
+  .cta__next { gap: 1rem; }
+  .countdown__cell b { font-size: 1.05rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cta__glow { animation: none; opacity: .8; }
+}
