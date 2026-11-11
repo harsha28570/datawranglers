@@ -1,422 +1,713 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<meta name="color-scheme" content="dark" />
-<meta name="theme-color" content="#0A0A0A" />
-<meta name="robots" content="index, follow" />
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#0A0A0A" />
+    <meta name="robots" content="index, follow" />
 
-<title>KALEIDO® — Events, Activations &amp; Workshops</title>
-<meta name="description" content="KALEIDO is an independent experience studio. We concept, produce and run events, brand activations and workshops that people actually turn up for." />
-<link rel="canonical" href="https://example.com/" />
+    <title>DATA WRANGLERS® — Events, Activations &amp; Workshops</title>
+    <meta
+      name="description"
+      content="DATA WRANGLERS is an independent experience studio. We concept, produce and run events, brand activations and workshops that people actually turn up for."
+    />
+    <link rel="canonical" href="https://example.com/" />
 
-<!-- ══ OPEN GRAPH / SOCIAL ══════════════════════════════════════════════
+    <!-- ══ OPEN GRAPH / SOCIAL ══════════════════════════════════════════════
      Replace og:image with your own 1200x630 export before going live. -->
-<meta property="og:type" content="website" />
-<meta property="og:site_name" content="KALEIDO®" />
-<meta property="og:title" content="KALEIDO® — We build moments people remember." />
-<meta property="og:description" content="Concept. Production. Activation. An independent experience studio. Registrations are open." />
-<meta property="og:url" content="https://example.com/" />
-<meta property="og:image" content="https://example.com/assets/images/og-cover.jpg" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="KALEIDO® — We build moments people remember." />
-<meta name="twitter:description" content="Concept. Production. Activation. An independent experience studio. Registrations are open." />
-<meta name="twitter:image" content="https://example.com/assets/images/og-cover.jpg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="DATA WRANGLERS®" />
+    <meta
+      property="og:title"
+      content="DATA WRANGLERS® — We build moments people remember."
+    />
+    <meta
+      property="og:description"
+      content="Concept. Production. Activation. An independent experience studio. Registrations are open."
+    />
+    <meta property="og:url" content="https://example.com/" />
+    <meta
+      property="og:image"
+      content="https://example.com/assets/images/og-cover.jpg"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="DATA WRANGLERS® — We build moments people remember."
+    />
+    <meta
+      name="twitter:description"
+      content="Concept. Production. Activation. An independent experience studio. Registrations are open."
+    />
+    <meta
+      name="twitter:image"
+      content="https://example.com/assets/images/og-cover.jpg"
+    />
 
-<!-- Favicon — inline SVG mark, no extra request -->
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230A0A0A'/%3E%3Cpath d='M14 12h9v17l16-17h11L31 32l20 20H39L23 35v17h-9z' fill='%23E63946'/%3E%3Ccircle cx='50' cy='16' r='4' fill='%232563EB'/%3E%3C/svg%3E" />
-<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230A0A0A'/%3E%3Cpath d='M14 12h9v17l16-17h11L31 32l20 20H39L23 35v17h-9z' fill='%23E63946'/%3E%3C/svg%3E" />
+    <!-- Favicon — inline SVG mark, no extra request -->
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230A0A0A'/%3E%3Cpath d='M14 12h9v17l16-17h11L31 32l20 20H39L23 35v17h-9z' fill='%23E63946'/%3E%3Ccircle cx='50' cy='16' r='4' fill='%232563EB'/%3E%3C/svg%3E"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230A0A0A'/%3E%3Cpath d='M14 12h9v17l16-17h11L31 32l20 20H39L23 35v17h-9z' fill='%23E63946'/%3E%3C/svg%3E"
+    />
 
-<!-- ══ TYPE ══════════════════════════════════════════════════════════
+    <!-- ══ TYPE ══════════════════════════════════════════════════════════
      Clash Display (headings) + General Sans (body) — Fontshare, free. -->
-<link rel="preconnect" href="https://api.fontshare.com" crossorigin />
-<link rel="preconnect" href="https://cdn.fontshare.com" crossorigin />
-<link rel="preload" as="style" href="https://api.fontshare.com/v2/css?f[]=clash-display@700,600,500&f[]=general-sans@400,500&display=swap" />
-<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=clash-display@700,600,500&f[]=general-sans@400,500&display=swap" media="print" onload="this.media='all'" />
-<noscript><link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=clash-display@700,600,500&f[]=general-sans@400,500&display=swap" /></noscript>
+    <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://api.fontshare.com/v2/css?f[]=clash-display@700,600,500&f[]=general-sans@400,500&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://api.fontshare.com/v2/css?f[]=clash-display@700,600,500&f[]=general-sans@400,500&display=swap"
+      media="print"
+      onload="this.media = 'all'"
+    />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://api.fontshare.com/v2/css?f[]=clash-display@700,600,500&f[]=general-sans@400,500&display=swap"
+    /></noscript>
 
-<link rel="stylesheet" href="css/reset.css" />
-<link rel="stylesheet" href="css/variables.css" />
-<link rel="stylesheet" href="css/global.css" />
-<link rel="stylesheet" href="css/hero.css" />
-<link rel="stylesheet" href="css/about.css" />
-<link rel="stylesheet" href="css/showcase.css" />
-<link rel="stylesheet" href="css/cta.css" />
-<link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/hero.css" />
+    <link rel="stylesheet" href="css/about.css" />
+    <link rel="stylesheet" href="css/showcase.css" />
+    <link rel="stylesheet" href="css/cta.css" />
+    <link rel="stylesheet" href="css/footer.css" />
 
-<!-- ══ ANALYTICS PLACEHOLDER ═════════════════════════════════════════
+    <!-- ══ ANALYTICS PLACEHOLDER ═════════════════════════════════════════
      Plausible : <script defer data-domain="yourdomain.com" src="https://plausible.io/js/script.js"></script>
      Umami     : <script defer src="https://analytics.yourdomain.com/script.js" data-website-id="XXXX"></script>
      ─────────────────────────────────────────────────────────────── -->
-</head>
+  </head>
 
-<body>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-<a class="skip-link" href="#main">Skip to content</a>
-
-<!-- ══ PRELOADER ═══════════════════════════════════════════════════ -->
-<div class="preloader" id="preloader" aria-hidden="true">
-  <div class="preloader__inner">
-    <div class="preloader__top">
-      <span class="preloader__tag">Loading experience</span>
-      <span class="preloader__tag">Est. 2019</span>
-    </div>
-    <div class="preloader__word" data-split="chars">KALEIDO</div>
-    <div class="preloader__bottom">
-      <div class="preloader__count"><span id="preloadCount">0</span><i>%</i></div>
-      <div class="preloader__bar"><span class="preloader__barFill"></span></div>
-    </div>
-  </div>
-</div>
-
-<!-- Film grain — fixed, full viewport -->
-<svg class="grain" aria-hidden="true" focusable="false">
-  <filter id="grainFilter">
-    <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch" />
-    <feColorMatrix type="saturate" values="0" />
-  </filter>
-  <rect width="100%" height="100%" filter="url(#grainFilter)" />
-</svg>
-
-<!-- Custom cursor (desktop only) -->
-<div class="cursor" id="cursor" aria-hidden="true">
-  <span class="cursor__dot"></span>
-  <span class="cursor__ring"><em class="cursor__label"></em></span>
-</div>
-
-<!-- Scroll progress -->
-<div class="progress" id="progress" aria-hidden="true"><span class="progress__fill"></span></div>
-
-<!-- ══ NAV ═════════════════════════════════════════════════════════ -->
-<header class="nav" id="nav">
-  <a class="nav__logo" href="#top" data-cursor="TOP" aria-label="KALEIDO — back to top">
-    KALEIDO<span class="nav__reg">®</span>
-  </a>
-  <a class="nav__cta" data-register href="#" target="_blank" rel="noopener" data-cursor="OPEN" aria-label="Register for the next event (opens in a new tab)">
-    <span>Register</span><i aria-hidden="true">→</i>
-  </a>
-</header>
-
-<main id="main">
-
-  <!-- ══ 01 — HERO ══════════════════════════════════════════════════ -->
-  <section class="hero" id="top" aria-labelledby="heroTitle">
-    <div class="hero__canvasWrap" aria-hidden="true">
-      <canvas id="heroCanvas"></canvas>
-    </div>
-    <div class="hero__glow" id="heroGlow" aria-hidden="true"></div>
-
-    <!-- deterministic hand-drawn geometry, not a gradient blob -->
-    <div class="hero__geo" aria-hidden="true">
-      <svg class="hero__arcs" viewBox="0 0 600 600" preserveAspectRatio="xMidYMid meet">
-        <circle cx="300" cy="300" r="90" /><circle cx="300" cy="300" r="150" />
-        <circle cx="300" cy="300" r="210" /><circle cx="300" cy="300" r="270" />
-      </svg>
-      <span class="hero__ringLabel">
-        <svg viewBox="0 0 200 200">
-          <defs><path id="ringPath" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0" /></defs>
-          <text><textPath href="#ringPath">CONCEPT · PRODUCTION · ACTIVATION · WORKSHOPS · </textPath></text>
-        </svg>
-      </span>
-    </div>
-
-    <div class="hero__content">
-      <p class="hero__meta reveal-line"><span class="dot"></span>Independent experience studio — Hyderabad, IN</p>
-
-      <h1 class="hero__title" id="heroTitle">
-        <span class="hero__line"><span class="hero__lineIn">We build</span></span>
-        <span class="hero__line"><span class="hero__lineIn">moments people</span></span>
-        <span class="hero__line"><span class="hero__lineIn"><em class="stroke">actually</em> remember.</span></span>
-      </h1>
-
-      <div class="hero__foot">
-        <p class="hero__sub reveal-line">
-          Concept, production and crowd energy for festivals, brand activations
-          and workshops. No filler. No stock ideas. Only rooms people refuse to leave.
-        </p>
-        <div class="hero__stats" role="list">
-          <div class="hero__stat" role="listitem"><b><span data-count="148">0</span></b><span>Events shipped</span></div>
-          <div class="hero__stat" role="listitem"><b><span data-count="42">0</span></b><span>Cities</span></div>
-          <div class="hero__stat" role="listitem"><b><span data-count="96">0</span><i>%</i></b><span>Return crowd</span></div>
+    <!-- ══ PRELOADER ═══════════════════════════════════════════════════ -->
+    <div class="preloader" id="preloader" aria-hidden="true">
+      <div class="preloader__inner">
+        <div class="preloader__top">
+          <span class="preloader__tag">Loading experience</span>
+          <span class="preloader__tag">Est. 2019</span>
         </div>
-      </div>
-    </div>
-
-    <div class="hero__side" aria-hidden="true"><span>Scroll to explore</span></div>
-
-    <div class="hero__ghost" aria-hidden="true">KALEIDO</div>
-
-    <a class="scrollcue" href="#about" data-cursor="GO" aria-label="Scroll to the about section">
-      <span class="scrollcue__line"></span>
-      <span class="scrollcue__txt">Scroll</span>
-    </a>
-  </section>
-
-  <!-- ══ 02 — ABOUT / WHAT WE DO ════════════════════════════════════ -->
-  <section class="about" id="about" aria-labelledby="aboutTitle">
-    <div class="sectionHead">
-      <span class="sectionTag"><i></i>What we do — 01</span>
-      <span class="sectionTag sectionTag--right">Since 2019</span>
-    </div>
-
-    <h2 class="about__statement" id="aboutTitle" data-word-highlight>
-      We design and produce live experiences — from a 40-person workshop
-      to a 4,000-person festival floor — and we run every one of them
-      end to end. <span class="hl">Concept, build, stage, crowd, teardown.</span>
-    </h2>
-
-    <div class="about__grid">
-      <div class="about__lead reveal-up">
-        <p>
-          Most events die in the planning doc. Ours survive contact with a real crowd
-          because the same people who draw the idea also stand behind the desk at 7am.
-        </p>
-        <p class="muted">
-          We work with colleges, brands, artist collectives and city councils —
-          usually on a repeat basis, which we take as the only metric that matters.
-        </p>
-      </div>
-
-      <ol class="services">
-        <li class="service reveal-up">
-          <span class="service__num">01</span>
-          <div class="service__body">
-            <h3>Concept &amp; Creative Direction</h3>
-            <p>Format, theme, naming, visual identity and the one idea the whole thing hangs on.</p>
+        <div class="preloader__word" aria-label="Data Wranglers">
+          <span class="preloader__brand preloader__brand--data">DATA</span>
+          <span class="preloader__brand preloader__brand--wranglers"
+            >WRANGLERS</span
+          >
+        </div>
+        <div class="preloader__bottom">
+          <div class="preloader__count">
+            <span id="preloadCount">0</span><i>%</i>
           </div>
-          <span class="service__arrow" aria-hidden="true">→</span>
-        </li>
-        <li class="service reveal-up">
-          <span class="service__num">02</span>
-          <div class="service__body">
-            <h3>Live Production &amp; Stage</h3>
-            <p>Stage, sound, lights, run-sheet, vendor control and the crew that keeps it on time.</p>
+          <div class="preloader__bar">
+            <span class="preloader__barFill"></span>
           </div>
-          <span class="service__arrow" aria-hidden="true">→</span>
-        </li>
-        <li class="service reveal-up">
-          <span class="service__num">03</span>
-          <div class="service__body">
-            <h3>Workshops &amp; Skill Labs</h3>
-            <p>Hands-on sessions in type, motion, sound and street photography — 20 to 200 seats.</p>
-          </div>
-          <span class="service__arrow" aria-hidden="true">→</span>
-        </li>
-        <li class="service reveal-up">
-          <span class="service__num">04</span>
-          <div class="service__body">
-            <h3>Brand Activations</h3>
-            <p>Pop-ups and installments built for footfall, dwell time and the photo everyone posts.</p>
-          </div>
-          <span class="service__arrow" aria-hidden="true">→</span>
-        </li>
-      </ol>
-    </div>
-  </section>
-
-  <!-- ══ TICKER ═════════════════════════════════════════════════════ -->
-  <div class="marquee" aria-hidden="true">
-    <div class="marquee__track" data-marquee>
-      <div class="marquee__group">
-        <span>Festivals</span><i></i><span>Brand Activations</span><i></i><span>Workshops</span><i></i>
-        <span>Pop-ups</span><i></i><span>Live Production</span><i></i><span>Creative Direction</span><i></i>
-        <span>Sound &amp; Light</span><i></i><span>Crowd Design</span><i></i>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- ══ 03 — SELECTED WORK (bento) ═════════════════════════════════ -->
-  <section class="work" id="work" aria-labelledby="workTitle">
-    <div class="sectionHead">
-      <span class="sectionTag"><i></i>Selected work — 02</span>
-      <span class="sectionTag sectionTag--right">2021 — 2026</span>
+    <!-- Film grain — fixed, full viewport -->
+    <svg class="grain" aria-hidden="true" focusable="false">
+      <filter id="grainFilter">
+        <feTurbulence
+          type="fractalNoise"
+          baseFrequency="0.8"
+          numOctaves="3"
+          stitchTiles="stitch"
+        />
+        <feColorMatrix type="saturate" values="0" />
+      </filter>
+      <rect width="100%" height="100%" filter="url(#grainFilter)" />
+    </svg>
+
+    <!-- Custom cursor (desktop only) -->
+    <div class="cursor" id="cursor" aria-hidden="true">
+      <span class="cursor__dot"></span>
+      <span class="cursor__ring"><em class="cursor__label"></em></span>
     </div>
 
-    <h2 class="work__title" id="workTitle">
-      <span class="work__titleMain" data-split="lines"><span>Selected <span class="red">work</span></span></span>
-      <span class="work__titleMeta">six out of 148</span>
-    </h2>
-
-    <div class="bento">
-      <article class="card card--xl" data-tilt data-cursor="VIEW" tabindex="0">
-        <span class="card__tag">Event</span>
-        <div class="card__inner">
-          <span class="card__year">2025</span>
-          <h3 class="card__title">Neon Nights Festival</h3>
-          <p class="card__desc">A two-day independent music and art festival. Three stages, 60 artists, 4,000 people a night — produced from a blank field and a six-week runway.</p>
-          <span class="card__meta">4,000 pax / night · 3 stages · 60 artists</span>
-        </div>
-        <span class="card__idx">01</span>
-      </article>
-
-      <article class="card" data-tilt data-cursor="VIEW" tabindex="0">
-        <span class="card__tag">Activation</span>
-        <div class="card__inner">
-          <span class="card__year">2024</span>
-          <h3 class="card__title">The Midnight Market</h3>
-          <p class="card__desc">A 10pm–2am street market built around 28 local makers and one very long table.</p>
-        </div>
-        <span class="card__idx">02</span>
-      </article>
-
-      <article class="card" data-tilt data-cursor="VIEW" tabindex="0">
-        <span class="card__tag">Workshop</span>
-        <div class="card__inner">
-          <span class="card__year">2025</span>
-          <h3 class="card__title">Type Riot</h3>
-          <p class="card__desc">Letterpress and hand-lettering lab. 120 seats, sold out in nine hours.</p>
-        </div>
-        <span class="card__idx">03</span>
-      </article>
-
-      <article class="card card--wide" data-tilt data-cursor="VIEW" tabindex="0">
-        <span class="card__tag">Series</span>
-        <div class="card__inner">
-          <span class="card__year">2023 — 24</span>
-          <h3 class="card__title">Campus Circuit</h3>
-          <p class="card__desc">A touring talk-and-demo series across 14 colleges — one van, one rig, one very tired crew.</p>
-          <span class="card__meta">14 campuses · 9 states · 3,100 students</span>
-        </div>
-        <span class="card__idx">04</span>
-      </article>
-
-      <article class="card" data-tilt data-cursor="VIEW" tabindex="0">
-        <span class="card__tag">Pop-up</span>
-        <div class="card__inner">
-          <span class="card__year">2024</span>
-          <h3 class="card__title">Sound Bath</h3>
-          <p class="card__desc">A listening room in a parking basement. 40 minutes, no phones, 200 people a night.</p>
-        </div>
-        <span class="card__idx">05</span>
-      </article>
-
-      <article class="card" data-tilt data-cursor="VIEW" tabindex="0">
-        <span class="card__tag">Event</span>
-        <div class="card__inner">
-          <span class="card__year">2026</span>
-          <h3 class="card__title">Rooftop Sessions</h3>
-          <p class="card__desc">Monthly sunset sets on a nine-storey roof. Currently the waitlist is longer than the guest list.</p>
-        </div>
-        <span class="card__idx">06</span>
-      </article>
+    <!-- Scroll progress -->
+    <div class="progress" id="progress" aria-hidden="true">
+      <span class="progress__fill"></span>
     </div>
-  </section>
 
-  <!-- ══ 04 — ARCHIVE (pinned horizontal rail) ══════════════════════ -->
-  <section class="archive" id="archive" aria-labelledby="archiveTitle">
-    <div class="archive__head">
-      <span class="sectionTag"><i></i>Archive — 03</span>
-      <h2 class="archive__title" id="archiveTitle">Everything <span class="red">else</span></h2>
-      <span class="archive__hint" aria-hidden="true">Keep scrolling <i></i></span>
-    </div>
-    <div class="rail" data-rail>
-      <div class="rail__track">
-        <article class="railCard"><span>2019</span><h3>First Light</h3><p>A 90-person launch gig in a printing press.</p></article>
-        <article class="railCard"><span>2020</span><h3>Static Radio</h3><p>Lockdown livestream series. 11 nights, 40k views.</p></article>
-        <article class="railCard"><span>2021</span><h3>Paper City</h3><p>Zine fair and print swap. 600 visitors.</p></article>
-        <article class="railCard"><span>2022</span><h3>Cold Open</h3><p>Comedy showcase across 6 open mics.</p></article>
-        <article class="railCard"><span>2022</span><h3>Gridwalk</h3><p>Street photography walk, old city, 4am start.</p></article>
-        <article class="railCard"><span>2023</span><h3>Bassment</h3><p>Underground club night, 700 capacity.</p></article>
-        <article class="railCard"><span>2023</span><h3>Slow Cinema</h3><p>Outdoor screenings on a college lawn.</p></article>
-        <article class="railCard"><span>2024</span><h3>Makers Row</h3><p>Craft market, 28 stalls, one rainy Sunday.</p></article>
-        <article class="railCard"><span>2025</span><h3>Amp Hour</h3><p>Live recording session, audience of 50.</p></article>
-        <article class="railCard"><span>2025</span><h3>Blackout</h3><p>No-light dinner event. Fully booked, twice over.</p></article>
-        <article class="railCard railCard--end"><span>Next</span><h3>Neon Nights ’26</h3><p>Registrations open. See you on the floor.</p></article>
-      </div>
-    </div>
-  </section>
+    <!-- ══ NAV ═════════════════════════════════════════════════════════ -->
+    <header class="nav" id="nav">
+      <a
+        class="nav__logo"
+        href="#top"
+        data-cursor="TOP"
+        aria-label="DATA WRANGLERS — back to top"
+      >
+        DATA WRANGLERS<span class="nav__reg">®</span>
+      </a>
+      <a
+        class="nav__cta"
+        data-register
+        href="#"
+        target="_blank"
+        rel="noopener"
+        data-cursor="OPEN"
+        aria-label="Register for the next event (opens in a new tab)"
+      >
+        <span>Register</span><i aria-hidden="true">→</i>
+      </a>
+    </header>
 
-  <!-- ══ 05 — REGISTRATION CTA ══════════════════════════════════════ -->
-  <section class="cta" id="register" aria-labelledby="ctaTitle">
-    <div class="cta__glow" aria-hidden="true"></div>
-    <div class="cta__ghost" aria-hidden="true">REGISTER</div>
-
-    <div class="cta__inner">
-      <span class="sectionTag sectionTag--center"><i></i>Registration — 04</span>
-
-      <h2 class="cta__title" id="ctaTitle" data-split="lines">
-        <span>Ready to</span><span>join <span class="red">us?</span></span>
-      </h2>
-
-      <p class="cta__sub">
-        Seats go to the list first. Drop your name in and we will send you the
-        schedule, the map and the one thing you should not forget to bring.
-      </p>
-
-      <div class="cta__next">
-        <div class="cta__nextLabel">
-          <span class="pulse" aria-hidden="true"></span>Next event
-          <span class="cta__dateValue" data-next-event-date>—</span>
+    <main id="main">
+      <!-- ══ 01 — HERO ══════════════════════════════════════════════════ -->
+      <section class="hero" id="top" aria-labelledby="heroTitle">
+        <div class="hero__canvasWrap" aria-hidden="true">
+          <canvas id="heroCanvas"></canvas>
         </div>
-        <div class="countdown" role="timer" aria-label="Time remaining until the next event">
-          <div class="countdown__cell"><b data-cd="d">00</b><span>Days</span></div>
-          <div class="countdown__cell"><b data-cd="h">00</b><span>Hrs</span></div>
-          <div class="countdown__cell"><b data-cd="m">00</b><span>Min</span></div>
-          <div class="countdown__cell"><b data-cd="s">00</b><span>Sec</span></div>
-        </div>
-      </div>
+        <div class="hero__glow" id="heroGlow" aria-hidden="true"></div>
 
-      <div class="cta__actions">
-        <a class="btnMagnet" data-register href="#" target="_blank" rel="noopener" data-cursor="OPEN" aria-label="Register now — opens the registration form in a new tab">
-          <span class="btnMagnet__fill" aria-hidden="true"></span>
-          <span class="btnMagnet__label">Register now</span>
-          <span class="btnMagnet__arrow" aria-hidden="true">→</span>
+        <!-- deterministic hand-drawn geometry, not a gradient blob -->
+        <div class="hero__geo" aria-hidden="true">
+          <svg
+            class="hero__arcs"
+            viewBox="0 0 600 600"
+            preserveAspectRatio="xMidYMid meet"
+          >
+            <circle cx="300" cy="300" r="90" />
+            <circle cx="300" cy="300" r="150" />
+            <circle cx="300" cy="300" r="210" />
+            <circle cx="300" cy="300" r="270" />
+          </svg>
+          <span class="hero__ringLabel">
+            <svg viewBox="0 0 200 200">
+              <defs>
+                <path
+                  id="ringPath"
+                  d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0"
+                />
+              </defs>
+              <text>
+                <textPath href="#ringPath">
+                  CONCEPT · PRODUCTION · ACTIVATION · WORKSHOPS ·
+                </textPath>
+              </text>
+            </svg>
+          </span>
+        </div>
+
+        <div class="hero__content">
+          <p class="hero__meta reveal-line">
+            <span class="dot"></span>Independent experience studio — Hyderabad,
+            IN
+          </p>
+
+          <h1 class="hero__title" id="heroTitle">
+            <span class="hero__line"
+              ><span class="hero__lineIn">We build</span></span
+            >
+            <span class="hero__line"
+              ><span class="hero__lineIn">moments people</span></span
+            >
+            <span class="hero__line"
+              ><span class="hero__lineIn"
+                ><em class="stroke">actually</em> remember.</span
+              ></span
+            >
+          </h1>
+
+          <div class="hero__foot">
+            <p class="hero__sub reveal-line">
+              Concept, production and crowd energy for festivals, brand
+              activations and workshops. No filler. No stock ideas. Only rooms
+              people refuse to leave.
+            </p>
+            <div class="hero__stats" role="list">
+              <div class="hero__stat" role="listitem">
+                <b><span data-count="148">0</span></b
+                ><span>Events shipped</span>
+              </div>
+              <div class="hero__stat" role="listitem">
+                <b><span data-count="42">0</span></b
+                ><span>Cities</span>
+              </div>
+              <div class="hero__stat" role="listitem">
+                <b><span data-count="96">0</span><i>%</i></b
+                ><span>Return crowd</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__side" aria-hidden="true">
+          <span>Scroll to explore</span>
+        </div>
+
+        <div class="hero__ghost" aria-hidden="true">DATA WRANGLERS</div>
+
+        <a
+          class="scrollcue"
+          href="#about"
+          data-cursor="GO"
+          aria-label="Scroll to the about section"
+        >
+          <span class="scrollcue__line"></span>
+          <span class="scrollcue__txt">Scroll</span>
         </a>
-        <p class="cta__note">Free form · takes 40 seconds · no spam, ever.</p>
+      </section>
+
+      <!-- ══ 02 — ABOUT / WHAT WE DO ════════════════════════════════════ -->
+      <section class="about" id="about" aria-labelledby="aboutTitle">
+        <div class="sectionHead">
+          <span class="sectionTag"><i></i>What we do — 01</span>
+          <span class="sectionTag sectionTag--right">Since 2019</span>
+        </div>
+
+        <h2 class="about__statement" id="aboutTitle" data-word-highlight>
+          We design and produce live experiences — from a 40-person workshop to
+          a 4,000-person festival floor — and we run every one of them end to
+          end. <span class="hl">Concept, build, stage, crowd, teardown.</span>
+        </h2>
+
+        <div class="about__grid">
+          <div class="about__lead reveal-up">
+            <p>
+              Most events die in the planning doc. Ours survive contact with a
+              real crowd because the same people who draw the idea also stand
+              behind the desk at 7am.
+            </p>
+            <p class="muted">
+              We work with colleges, brands, artist collectives and city
+              councils — usually on a repeat basis, which we take as the only
+              metric that matters.
+            </p>
+          </div>
+
+          <ol class="services">
+            <li class="service reveal-up">
+              <span class="service__num">01</span>
+              <div class="service__body">
+                <h3>Concept &amp; Creative Direction</h3>
+                <p>
+                  Format, theme, naming, visual identity and the one idea the
+                  whole thing hangs on.
+                </p>
+              </div>
+              <span class="service__arrow" aria-hidden="true">→</span>
+            </li>
+            <li class="service reveal-up">
+              <span class="service__num">02</span>
+              <div class="service__body">
+                <h3>Live Production &amp; Stage</h3>
+                <p>
+                  Stage, sound, lights, run-sheet, vendor control and the crew
+                  that keeps it on time.
+                </p>
+              </div>
+              <span class="service__arrow" aria-hidden="true">→</span>
+            </li>
+            <li class="service reveal-up">
+              <span class="service__num">03</span>
+              <div class="service__body">
+                <h3>Workshops &amp; Skill Labs</h3>
+                <p>
+                  Hands-on sessions in type, motion, sound and street
+                  photography — 20 to 200 seats.
+                </p>
+              </div>
+              <span class="service__arrow" aria-hidden="true">→</span>
+            </li>
+            <li class="service reveal-up">
+              <span class="service__num">04</span>
+              <div class="service__body">
+                <h3>Brand Activations</h3>
+                <p>
+                  Pop-ups and installments built for footfall, dwell time and
+                  the photo everyone posts.
+                </p>
+              </div>
+              <span class="service__arrow" aria-hidden="true">→</span>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ══ TICKER ═════════════════════════════════════════════════════ -->
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track" data-marquee>
+          <div class="marquee__group">
+            <span>Festivals</span><i></i><span>Brand Activations</span><i></i
+            ><span>Workshops</span><i></i> <span>Pop-ups</span><i></i
+            ><span>Live Production</span><i></i><span>Creative Direction</span
+            ><i></i> <span>Sound &amp; Light</span><i></i
+            ><span>Crowd Design</span><i></i>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
-</main>
 
-<!-- ══ FOOTER ═════════════════════════════════════════════════════ -->
-<footer class="footer">
-  <div class="footer__top">
-    <div class="footer__brand">
-      <span class="footer__mark" aria-hidden="true"></span>
-      <p class="footer__name">KALEIDO<span>®</span></p>
-      <p class="footer__line">Independent experience studio<br />Hyderabad — Telangana, IN</p>
-    </div>
+      <!-- ══ 03 — SELECTED WORK (bento) ═════════════════════════════════ -->
+      <section class="work" id="work" aria-labelledby="workTitle">
+        <div class="sectionHead">
+          <span class="sectionTag"><i></i>Selected work — 02</span>
+          <span class="sectionTag sectionTag--right">2021 — 2026</span>
+        </div>
 
-    <nav class="footer__social" aria-label="Social media">
-      <a href="https://instagram.com/" target="_blank" rel="noopener" data-cursor="OPEN">Instagram</a>
-      <a href="https://twitter.com/" target="_blank" rel="noopener" data-cursor="OPEN">Twitter</a>
-      <a href="https://youtube.com/" target="_blank" rel="noopener" data-cursor="OPEN">YouTube</a>
-    </nav>
+        <h2 class="work__title" id="workTitle">
+          <span class="work__titleMain" data-split="lines"
+            ><span>Selected <span class="red">work</span></span></span
+          >
+          <span class="work__titleMeta">six out of 148</span>
+        </h2>
 
-    <button class="footer__mail" id="copyMail" data-cursor="COPY" aria-label="Copy our email address to clipboard">
-      <span class="footer__mailLabel">Say hello</span>
-      <span class="footer__mailValue" data-mail>hello@kaleido.studio</span>
-      <span class="footer__mailHint">Click to copy</span>
-    </button>
-  </div>
+        <div class="bento">
+          <article
+            class="card card--xl"
+            data-tilt
+            data-cursor="VIEW"
+            tabindex="0"
+          >
+            <span class="card__tag">Event</span>
+            <div class="card__inner">
+              <span class="card__year">2025</span>
+              <h3 class="card__title">Neon Nights Festival</h3>
+              <p class="card__desc">
+                A two-day independent music and art festival. Three stages, 60
+                artists, 4,000 people a night — produced from a blank field and
+                a six-week runway.
+              </p>
+              <span class="card__meta"
+                >4,000 pax / night · 3 stages · 60 artists</span
+              >
+            </div>
+            <span class="card__idx">01</span>
+          </article>
 
-  <div class="footer__bottom">
-    <p>© <span id="year">2026</span> Kaleido — All rights reserved.</p>
-    <p class="footer__built">Built for the floor, not the feed.</p>
-    <button class="toTop" id="toTop" data-cursor="TOP" aria-label="Back to top">
-      <span>Back to top</span>
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20V5M5 12l7-7 7 7" /></svg>
-    </button>
-  </div>
-</footer>
+          <article class="card" data-tilt data-cursor="VIEW" tabindex="0">
+            <span class="card__tag">Activation</span>
+            <div class="card__inner">
+              <span class="card__year">2024</span>
+              <h3 class="card__title">The Midnight Market</h3>
+              <p class="card__desc">
+                A 10pm–2am street market built around 28 local makers and one
+                very long table.
+              </p>
+            </div>
+            <span class="card__idx">02</span>
+          </article>
 
-<div class="toast" id="toast" role="status" aria-live="polite"></div>
+          <article class="card" data-tilt data-cursor="VIEW" tabindex="0">
+            <span class="card__tag">Workshop</span>
+            <div class="card__inner">
+              <span class="card__year">2025</span>
+              <h3 class="card__title">Type Riot</h3>
+              <p class="card__desc">
+                Letterpress and hand-lettering lab. 120 seats, sold out in nine
+                hours.
+              </p>
+            </div>
+            <span class="card__idx">03</span>
+          </article>
 
-<!-- ══ LIBS ════════════════════════════════════════════════════════ -->
-<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollToPlugin.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/lenis@1.3.4/dist/lenis.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
+          <article
+            class="card card--wide"
+            data-tilt
+            data-cursor="VIEW"
+            tabindex="0"
+          >
+            <span class="card__tag">Series</span>
+            <div class="card__inner">
+              <span class="card__year">2023 — 24</span>
+              <h3 class="card__title">Campus Circuit</h3>
+              <p class="card__desc">
+                A touring talk-and-demo series across 14 colleges — one van, one
+                rig, one very tired crew.
+              </p>
+              <span class="card__meta"
+                >14 campuses · 9 states · 3,100 students</span
+              >
+            </div>
+            <span class="card__idx">04</span>
+          </article>
 
-<!-- ══ SITE ════════════════════════════════════════════════════════ -->
-<script defer src="js/config.js"></script>
-<script defer src="js/preloader.js"></script>
-<script defer src="js/smooth-scroll.js"></script>
-<script defer src="js/cursor.js"></script>
-<script defer src="js/animations.js"></script>
-<script defer src="js/main.js"></script>
-</body>
+          <article class="card" data-tilt data-cursor="VIEW" tabindex="0">
+            <span class="card__tag">Pop-up</span>
+            <div class="card__inner">
+              <span class="card__year">2024</span>
+              <h3 class="card__title">Sound Bath</h3>
+              <p class="card__desc">
+                A listening room in a parking basement. 40 minutes, no phones,
+                200 people a night.
+              </p>
+            </div>
+            <span class="card__idx">05</span>
+          </article>
+
+          <article class="card" data-tilt data-cursor="VIEW" tabindex="0">
+            <span class="card__tag">Event</span>
+            <div class="card__inner">
+              <span class="card__year">2026</span>
+              <h3 class="card__title">Rooftop Sessions</h3>
+              <p class="card__desc">
+                Monthly sunset sets on a nine-storey roof. Currently the
+                waitlist is longer than the guest list.
+              </p>
+            </div>
+            <span class="card__idx">06</span>
+          </article>
+        </div>
+      </section>
+
+      <!-- ══ 04 — ARCHIVE (pinned horizontal rail) ══════════════════════ -->
+      <section class="archive" id="archive" aria-labelledby="archiveTitle">
+        <div class="archive__head">
+          <span class="sectionTag"><i></i>Archive — 03</span>
+          <h2 class="archive__title" id="archiveTitle">
+            Everything <span class="red">else</span>
+          </h2>
+          <span class="archive__hint" aria-hidden="true"
+            >Keep scrolling <i></i
+          ></span>
+        </div>
+        <div class="rail" data-rail>
+          <div class="rail__track">
+            <article class="railCard">
+              <span>2019</span>
+              <h3>First Light</h3>
+              <p>A 90-person launch gig in a printing press.</p>
+            </article>
+            <article class="railCard">
+              <span>2020</span>
+              <h3>Static Radio</h3>
+              <p>Lockdown livestream series. 11 nights, 40k views.</p>
+            </article>
+            <article class="railCard">
+              <span>2021</span>
+              <h3>Paper City</h3>
+              <p>Zine fair and print swap. 600 visitors.</p>
+            </article>
+            <article class="railCard">
+              <span>2022</span>
+              <h3>Cold Open</h3>
+              <p>Comedy showcase across 6 open mics.</p>
+            </article>
+            <article class="railCard">
+              <span>2022</span>
+              <h3>Gridwalk</h3>
+              <p>Street photography walk, old city, 4am start.</p>
+            </article>
+            <article class="railCard">
+              <span>2023</span>
+              <h3>Bassment</h3>
+              <p>Underground club night, 700 capacity.</p>
+            </article>
+            <article class="railCard">
+              <span>2023</span>
+              <h3>Slow Cinema</h3>
+              <p>Outdoor screenings on a college lawn.</p>
+            </article>
+            <article class="railCard">
+              <span>2024</span>
+              <h3>Makers Row</h3>
+              <p>Craft market, 28 stalls, one rainy Sunday.</p>
+            </article>
+            <article class="railCard">
+              <span>2025</span>
+              <h3>Amp Hour</h3>
+              <p>Live recording session, audience of 50.</p>
+            </article>
+            <article class="railCard">
+              <span>2025</span>
+              <h3>Blackout</h3>
+              <p>No-light dinner event. Fully booked, twice over.</p>
+            </article>
+            <article class="railCard railCard--end">
+              <span>Next</span>
+              <h3>Neon Nights ’26</h3>
+              <p>Registrations open. See you on the floor.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══ 05 — REGISTRATION CTA ══════════════════════════════════════ -->
+      <section class="cta" id="register" aria-labelledby="ctaTitle">
+        <div class="cta__glow" aria-hidden="true"></div>
+        <div class="cta__ghost" aria-hidden="true">REGISTER</div>
+
+        <div class="cta__inner">
+          <span class="sectionTag sectionTag--center"
+            ><i></i>Registration — 04</span
+          >
+
+          <h2 class="cta__title" id="ctaTitle" data-split="lines">
+            <span>Ready to</span><span>join <span class="red">us?</span></span>
+          </h2>
+
+          <p class="cta__sub">
+            Seats go to the list first. Drop your name in and we will send you
+            the schedule, the map and the one thing you should not forget to
+            bring.
+          </p>
+
+          <div class="cta__next">
+            <div class="cta__nextLabel">
+              <span class="pulse" aria-hidden="true"></span>Next event
+              <span class="cta__dateValue" data-next-event-date>—</span>
+            </div>
+            <div
+              class="countdown"
+              role="timer"
+              aria-label="Time remaining until the next event"
+            >
+              <div class="countdown__cell">
+                <b data-cd="d">00</b><span>Days</span>
+              </div>
+              <div class="countdown__cell">
+                <b data-cd="h">00</b><span>Hrs</span>
+              </div>
+              <div class="countdown__cell">
+                <b data-cd="m">00</b><span>Min</span>
+              </div>
+              <div class="countdown__cell">
+                <b data-cd="s">00</b><span>Sec</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="cta__actions">
+            <a
+              class="btnMagnet"
+              data-register
+              href="#"
+              target="_blank"
+              rel="noopener"
+              data-cursor="OPEN"
+              aria-label="Register now — opens the registration form in a new tab"
+            >
+              <span class="btnMagnet__fill" aria-hidden="true"></span>
+              <span class="btnMagnet__label">Register now</span>
+              <span class="btnMagnet__arrow" aria-hidden="true">→</span>
+            </a>
+            <p class="cta__note">
+              Free form · takes 40 seconds · no spam, ever.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ══ FOOTER ═════════════════════════════════════════════════════ -->
+    <footer class="footer">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <span class="footer__mark" aria-hidden="true"></span>
+          <p class="footer__name">DATA WRANGLERS<span>®</span></p>
+          <p class="footer__line">
+            Independent experience studio<br />Hyderabad — Telangana, IN
+          </p>
+        </div>
+
+        <nav class="footer__social" aria-label="Social media">
+          <a
+            href="https://instagram.com/"
+            target="_blank"
+            rel="noopener"
+            data-cursor="OPEN"
+            >Instagram</a
+          >
+          <a
+            href="https://twitter.com/"
+            target="_blank"
+            rel="noopener"
+            data-cursor="OPEN"
+            >Twitter</a
+          >
+          <a
+            href="https://youtube.com/"
+            target="_blank"
+            rel="noopener"
+            data-cursor="OPEN"
+            >YouTube</a
+          >
+        </nav>
+
+        <button
+          class="footer__mail"
+          id="copyMail"
+          data-cursor="COPY"
+          aria-label="Copy our email address to clipboard"
+        >
+          <span class="footer__mailLabel">Say hello</span>
+          <span class="footer__mailValue" data-mail
+            >hello@datawranglers.com</span
+          >
+          <span class="footer__mailHint">Click to copy</span>
+        </button>
+      </div>
+
+      <div class="footer__bottom">
+        <p>
+          © <span id="year">2026</span> Data Wranglers — All rights reserved.
+        </p>
+        <p class="footer__built">Built for the floor, not the feed.</p>
+        <button
+          class="toTop"
+          id="toTop"
+          data-cursor="TOP"
+          aria-label="Back to top"
+        >
+          <span>Back to top</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 20V5M5 12l7-7 7 7" />
+          </svg>
+        </button>
+      </div>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <!-- ══ LIBS ════════════════════════════════════════════════════════ -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollToPlugin.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/lenis@1.3.4/dist/lenis.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"
+    ></script>
+
+    <!-- ══ SITE ════════════════════════════════════════════════════════ -->
+    <script defer src="js/config.js"></script>
+    <script defer src="js/preloader.js"></script>
+    <script defer src="js/smooth-scroll.js"></script>
+    <script defer src="js/cursor.js"></script>
+    <script defer src="js/animations.js"></script>
+    <script defer src="js/main.js"></script>
+  </body>
 </html>

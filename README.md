@@ -1,4 +1,4 @@
-# KALEIDO® — single-page experience studio site
+# DATA WRANGLERS® — single-page experience studio site
 
 A dark, editorial, motion-heavy one-pager: **black canvas · red display type · white body · electric-blue accents.**
 Built with vanilla HTML/CSS/JS + GSAP (ScrollTrigger, SplitText) + Lenis + vanilla-tilt, all from CDN.
@@ -9,13 +9,13 @@ Open `index.html` in a browser and it just works. No build step.
 
 Everything personal lives in **`js/config.js`**:
 
-| Key | What it controls |
-|---|---|
-| `REGISTER_URL` | Your registration form (Google Forms / Luma / Eventbrite…). Applied to every REGISTER button automatically. |
-| `EMAIL` | Footer email + click-to-copy. |
-| `EVENT_DATE` | Countdown target (`'2026-09-14T18:00:00'`). Leave `null` to auto-roll to the next 14th of a month. |
-| `TAB_TITLE_AWAY` | The "come back" tab title when visitors switch tabs. |
-| `LIGHT_MOTION` | Set `true` to disable parallax / tilt / pin everywhere. |
+| Key              | What it controls                                                                                            |
+| ---------------- | ----------------------------------------------------------------------------------------------------------- |
+| `REGISTER_URL`   | Your registration form (Google Forms / Luma / Eventbrite…). Applied to every REGISTER button automatically. |
+| `EMAIL`          | Footer email + click-to-copy.                                                                               |
+| `EVENT_DATE`     | Countdown target (`'2026-09-14T18:00:00'`). Leave `null` to auto-roll to the next 14th of a month.          |
+| `TAB_TITLE_AWAY` | The "come back" tab title when visitors switch tabs.                                                        |
+| `LIGHT_MOTION`   | Set `true` to disable parallax / tilt / pin everywhere.                                                     |
 
 Text, services, work cards and archive entries are plain HTML in `index.html` — edit the words, keep the classes.
 
@@ -25,7 +25,7 @@ Text, services, work cards and archive entries are plain HTML in `index.html` �
 2. **Socials** — swap the three `href`s in the footer.
 3. **Analytics** — uncomment the Plausible/Umami snippet in the `<head>` of `index.html`.
 4. **Favicon** — currently an inline SVG data-URI (red K mark). Replace the `rel="icon"` href with your own file if you prefer.
-5. Brand rename: search-replace `KALEIDO` in `index.html` (+ the preloader word).
+5. Brand rename: search-replace `DATA WRANGLERS` in `index.html` (+ the preloader word).
 
 ## What's inside (the fun parts)
 
